@@ -9,6 +9,15 @@
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 
 /* Chats Page */
 
@@ -23,24 +32,27 @@
 .nav-bar {
   width: 100%;
   height: 66px;
-  background-color: #002766;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
 }
 
 .logo-tab {
-  position: absolute;
-  left: 22px;
-  top: 12px;
   font-size: 32px;
   font-weight: 700;
   color: white;
 }
 
 .logout-tab {
-  position: absolute;
-  top: 22px;
-  right: 22px;
   color: white;
   cursor: pointer;
+}
+.logout-tab .logout-button{
+  border-radius: 10px;
+  background-color: hsl(355, 86%, 49%);
+}
+.logout-tab .logout-button:hover{
+  background-color: hsl(355, 86%, 39%);
 }
 
 ::-webkit-scrollbar {
@@ -52,23 +64,21 @@
 
 #login-page {
   background-image: linear-gradient(#40a9ff, #096dd9);
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 #login-card {
-  position: relative;
-  top: calc(50vh - 144px);
-  left: calc(50vw - 210px);
   padding-top: 36px;
-  padding-bottom: 66px;
-  width: 420px;
+  padding-bottom: 50px;
+  max-width: 420px;
   text-align: center;
   background-color: white;
   border-radius: 22px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-button {
@@ -76,16 +86,21 @@
   color: white;
   padding: 12px;
   border-radius: 8px;
-  display: inline-block;
 }
 
 .facebook {
-  background-color: #3b5998;
+  background-color: hsl(221, 44%, 41%);
+}
+.facebook:hover {
+  background-color: hsl(221, 44%, 31%);
 }
 
 .google {
-  background-color: #4285f4;
+  background-color: hsl(217, 89%, 61%);
   color: white;
+}
+.google:hover {
+  background-color: hsl(217, 89%, 51%);
 }
 
 #loading-container {
@@ -102,4 +117,45 @@
   position: relative;
   left: calc(50vw - 33px);
   top: calc(50vh - 22px);
+}
+
+.ql-container {
+  border: 0 !important;
+  border-radius: 20px;
+  /* width: 90%; */
+  margin: 0 2px !important;
+  background-color: #f0f2f5;
+  margin-bottom: 5px;
+  position: relative;
+}
+.ql-editor{
+  position: relative;
+}
+.ql-editor::after{
+  content: 'Send a message';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #929292;
+}
+.ql-editor:focus::after{
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #929292;
+}
+.ql-toolbar{
+  border: 0 !important;
+}
+
+.ce-my-message-bubble {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+#ce-send-message-button{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
