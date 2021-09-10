@@ -20,7 +20,7 @@ export default function Chats() {
     const data = await response.blob()
     return new File([data],"userPhoto.jpg", {type: 'image/jpe'})
   }
-
+  // add comment to test git alias pushlish
   useEffect(()=>{
     if(!user) {
       history.push('/')
